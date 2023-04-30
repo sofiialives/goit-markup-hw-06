@@ -452,7 +452,6 @@ body {
   transform: translate(0, 0);
 }
 /* Footer */
-
 .footer {
   background: var(--secondary-txt-cl);
   padding-top: 100px;
@@ -528,8 +527,12 @@ body {
 .footer-svg-icon {
   fill: var(--section-cl);
 }
-.footer-form {
+.footer-form-container{ 
   margin-left: 80px;
+}
+.footer-form{
+  display: flex;
+  gap: 24px
 }
 .footer-form-text {
   font-weight: 500;
@@ -539,16 +542,20 @@ body {
 .footer-input {
   width: 264px;
   height: 40px;
-  font-size: 12px;
-  line-height: 2;
   color: var(--background-cl);
   padding: 8px 16px;
   border: 1px solid var(--background-cl);
   border-radius: 4px;
   background-color: transparent;
-  margin-right: 24px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   transition: border var(--transition-duration)
     var(--transition-timing-function);
+}
+.footer-input::placeholder{
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--background-cl);
 }
 .footer-input:focus {
   border: 1px solid var(--accent-cl);
